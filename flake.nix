@@ -7,11 +7,6 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     treefmt-nix.url = "github:numtide/treefmt-nix";
 
-    # plugins
-    auto-save = {
-      url = "github:Pocco81/auto-save.nvim";
-      flake = false;
-    };
     friendly-snippets = {
       url = "github:rafamadriz/friendly-snippets";
       flake = false;
@@ -44,15 +39,22 @@
         inputs.treefmt-nix.flakeModule
       ];
 
-      perSystem = {
-        pkgs,
-        system,
-        ...
-      }: let
+      perSystem = {system, ...}: let
+        pkgs = import inputs.nixpkgs {
+          system = system;
+          config = {
+            allowUnfree = true;
+            allowBroken = true;
+            permittedInsecurePackages = [
+              "electron-27.3.11"
+            ];
+          };
+        };
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {
           inherit pkgs;
+
           module = import ./config; # import the module directly
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs =

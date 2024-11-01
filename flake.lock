@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "auto-save": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1667329943,
-        "narHash": "sha256-bWGil73YiCKZEaY7IuUOIU4Q7k7qCMjSeQ4I+cAVe44=",
-        "owner": "Pocco81",
-        "repo": "auto-save.nvim",
-        "rev": "979b6c82f60cfa80f4cf437d77446d0ded0addf0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Pocco81",
-        "repo": "auto-save.nvim",
-        "type": "github"
-      }
-    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -389,7 +373,6 @@
     },
     "root": {
       "inputs": {
-        "auto-save": "auto-save",
         "flake-parts": "flake-parts",
         "friendly-snippets": "friendly-snippets",
         "lsp-zero": "lsp-zero",

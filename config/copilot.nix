@@ -1,3 +1,3 @@
 {mkPlugin, ...}: {
-  #plugins.copilot-lua.enable = true;
+  plugins.copilot-vim.enable = true;
 }

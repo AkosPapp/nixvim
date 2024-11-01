@@ -3,16 +3,15 @@
     enable = true;
     autoEnableSources = true;
     settings = {
-      #window = {
-      #  completion = {__raw = "cmp.config.window.bordered()";};
-      #  documentation = {__raw = "cmp.config.window.bordered()";};
-      #};
       mapping = {
-        "<C-b>" = "cmp.mapping.scroll_docs(-4)";
+        "<C-Space>" = "cmp.mapping.confirm({ select = true })";
+
+        "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+        "<C-e>" = "cmp.mapping.close()";
         "<C-f>" = "cmp.mapping.scroll_docs(4)";
-        "<C-Space>" = "cmp.mapping.complete()";
-        "<A-Space>" = "cmp.mapping.complete()";
-        "<C-e>" = "cmp.mapping.abort()";
+
+        "<C-p>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+        "<C-n>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
       };
       snippet.expand = ''
         function(args)
