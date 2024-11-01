@@ -1,8 +1,14 @@
 {
   extraConfigLua = ''
-    vim.keymap.set('v', '<leader>y', "\"+y")
-    vim.keymap.set('n', '<leader>q', function() vim.cmd("wa") vim.cmd("q") end)
+    vim.keymap.set('n', 'Y', "yy")
+    vim.keymap.set('n', '<leader>Y', "\"+yy")
+    vim.keymap.set({'n', 'v'}, '<leader>y', "\"+y")
+    vim.keymap.set({'n', 'v'}, '<leader>y', "\"+y")
+    vim.keymap.set({'n', 'v'}, '<leader>p', "\"+p")
+    vim.keymap.set({'n', 'v'}, '<leader>P', "\"+P")
     vim.keymap.set('n', '<leader>w', function() vim.cmd("wa") end)
+    vim.keymap.set('n', '<leader>q', function() vim.cmd("waq") end)
+    vim.keymap.set('n', '<leader>Q', function() vim.cmd("qa!") end)
     vim.keymap.set('n', '<leader>=', "gg=G<C-o>")
 
     -- windows
