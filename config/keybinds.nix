@@ -1,0 +1,40 @@
+{
+  extraConfigLua = ''
+    vim.keymap.set('v', '<leader>y', "\"+y")
+    vim.keymap.set('n', '<leader>q', function() vim.cmd("wa") vim.cmd("q") end)
+    vim.keymap.set('n', '<leader>w', function() vim.cmd("wa") end)
+    vim.keymap.set('n', '<leader>=', "gg=G<C-o>")
+
+    -- windows
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-A>", function() vim.cmd("wincmd A") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-C>", function() vim.cmd("wincmd C") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-H>", function() vim.cmd("wincmd H") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-J>", function() vim.cmd("wincmd J") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-K>", function() vim.cmd("wincmd K") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-L>", function() vim.cmd("wincmd L") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-Q>", function() vim.cmd("wincmd Q") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-S>", function() vim.cmd("wincmd S") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-T>", function() vim.cmd("wincmd T") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-U>", function() vim.cmd("wincmd U") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-V>", function() vim.cmd("wincmd V") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-a>", function() vim.cmd("wincmd a") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-c>", function() vim.cmd("close") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-h>", function() vim.cmd("wincmd h") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-i>", function() vim.cmd("wincmd i") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-j>", function() vim.cmd("wincmd j") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-k>", function() vim.cmd("wincmd k") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-l>", function() vim.cmd("wincmd l") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-m>", function() vim.cmd("wincmd m") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-o>", function() vim.cmd("only") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-r>", function() vim.cmd("wincmd r") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-s>", function() vim.cmd("split") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-t>", function() vim.cmd("wincmd t") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-u>", function() vim.cmd("wincmd u") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-v>", function() vim.cmd("vsplit") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-w>", function() vim.cmd("wincmd w") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-x>", function() vim.cmd("wincmd x") end )
+
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-n>", function() vim.cmd("tabNext") end )
+    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-p>", function() vim.cmd("tabprevious") end )
+  '';
+}
