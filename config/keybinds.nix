@@ -39,8 +39,5 @@
     vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-v>", function() vim.cmd("vsplit") end )
     vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-w>", function() vim.cmd("wincmd w") end )
     vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-x>", function() vim.cmd("wincmd x") end )
-
-    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-n>", function() vim.cmd("tabNext") end )
-    vim.keymap.set({'n', 'i', 's', 'v', 't'}, "<A-p>", function() vim.cmd("tabprevious") end )
   '';
 }
