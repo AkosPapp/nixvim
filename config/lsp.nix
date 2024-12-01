@@ -42,7 +42,7 @@
       nixd.enable = true;
       marksman.enable = true;
       omnisharp = {
-        enable = true;
+        enable = false;
         settings = {
           enableEditorConfigSupport = true;
           enableImportCompletion = true;
