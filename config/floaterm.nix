@@ -1,8 +1,10 @@
 {mkPlugin, ...}: {
   plugins.floaterm = {
     enable = true;
-    width = 0.9;
-    height = 0.9;
+    settings = {
+      width = 0.9;
+      height = 0.9;
+    };
   };
   extraConfigLua = ''
     vim.keymap.set({ 'n', 'i', 's', 'v', 't' }, "<A-t>", function() vim.api.nvim_command('FloatermToggle') end)
